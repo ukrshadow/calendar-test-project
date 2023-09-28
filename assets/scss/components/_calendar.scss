@@ -67,7 +67,28 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            background: $c-white;
+            border: none;
             cursor: pointer;
+
+            &:focus {
+                border: 3px solid $c-dark-purpure;
+                border-radius: 4px;
+                transition: all 0.1s ease-out;
+            }
+
+            &--current-day,
+            &--select-day {
+                border-radius: 4px;
+                color: $c-white;
+                background: $c-dark-purpure;
+            }
+
+            &--another-month-day {
+                border-radius: 4px;
+                background: #E7E7E7;
+                color: $c-dark-gray;
+            }
         }
 
 

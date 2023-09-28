@@ -41,23 +41,22 @@ const setTileDay = (month, year) => {
         weekday.push(new Date(date).toLocaleString("en-US", { weekday: "short" }));
         date.setDate(date.getDate() + 1);
     }
-    console.log(weekday);
-    console.log(days);
     for (let i = 0; i < tileDay; i++) {
-        const daysItem = document.createElement('div');
+        const daysItem = document.createElement('button');
         daySelected.appendChild(daysItem).classList.add('calendar__day-item');
         if (i < days[i]) {
             daysItem.innerHTML = days[i]
             if (days[i] == currentDay) {
-                daysItem.classList.add('--current-day')
+                daysItem.classList.add('calendar__day-item--current-day')
             }
         }
         else {
             let nextMonthDays = days[y++]
-            daysItem.classList.add('--another-month-day')
+            daysItem.classList.add('calendar__day-item--another-month-day')
             daysItem.innerHTML = nextMonthDays
         }
     }
 }
 
 setTileDay(new Date().getMonth(), new Date().getFullYear())
+
