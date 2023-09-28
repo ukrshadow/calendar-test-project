@@ -7,7 +7,7 @@ import "./styles.scss";
 const CalendarPicker = () => {
   const [value, onChange] = useState(new Date());
   return (
-    <div>
+    <div className="wrapper">
       <Calendar
         onChange={onChange}
         value={value}

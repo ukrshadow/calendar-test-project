@@ -1,13 +1,11 @@
-import CalendarPicker from "./CalendarPicker";
+import CalendarPicker from "../CalendarPicker";
+import styles from "./styles.module.scss";
 
 const App = () => {
   return (
-    <>
-      <div>sdasdasd</div>
-      <div>
-        <CalendarPicker />
-      </div>
-    </>
+    <div className={styles.container}>
+      <CalendarPicker />
+    </div>
   );
 };
 
