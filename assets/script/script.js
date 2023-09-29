@@ -48,6 +48,7 @@ const setTileDay = (month, year) => {
             daysItem.innerHTML = days[i]
             if (days[i] == currentDay) {
                 daysItem.classList.add('calendar__day-item--current-day')
+                daysItem.disabled = true
             }
         }
         else {
