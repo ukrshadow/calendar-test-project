@@ -22,12 +22,31 @@
         margin-bottom: 15px;
         align-items: center;
 
+        &-buttons {
+            width: 35px;
+            height: 35px;
+            background-color: $c-white;
+            border: none;
+
+            &:hover {
+                background-color: #e7e7e775;
+                border-radius: 4px;
+                transition: all 0.1s ease;
+            }
+
+            &:focus {
+                border: 3px solid $c-dark-purpure;
+                border-radius: 4px;
+                opacity: 0.8;
+                transition: all 0.1s ease;
+            }
+        }
+
         &-arrow {
             width: 8px;
             height: 21px;
             cursor: pointer;
         }
-
     }
 
     &__currentMonth {
@@ -71,14 +90,21 @@
             border: none;
             cursor: pointer;
 
+
             &:focus {
                 border: 3px solid $c-dark-purpure;
                 border-radius: 4px;
-                transition: all 0.1s ease-out;
+                opacity: 0.8;
+                transition: all 0.1s ease;
             }
 
-            &--current-day,
-            &--select-day {
+            &:not([disabled]):hover {
+                background-color: #e7e7e775;
+                border-radius: 4px;
+                transition: all 0.1s ease;
+            }
+
+            &--current-day {
                 border-radius: 4px;
                 color: $c-white;
                 background: $c-dark-purpure;

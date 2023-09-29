@@ -50,6 +50,23 @@ a {
   margin-bottom: 15px;
   align-items: center;
 }
+.calendar__navigation-buttons {
+  width: 35px;
+  height: 35px;
+  background-color: #FFFFFF;
+  border: none;
+}
+.calendar__navigation-buttons:hover {
+  background-color: rgba(231, 231, 231, 0.4588235294);
+  border-radius: 4px;
+  transition: all 0.1s ease;
+}
+.calendar__navigation-buttons:focus {
+  border: 3px solid #6E4B7B;
+  border-radius: 4px;
+  opacity: 0.8;
+  transition: all 0.1s ease;
+}
 .calendar__navigation-arrow {
   width: 8px;
   height: 21px;
@@ -94,9 +111,15 @@ a {
 .calendar__day-item:focus {
   border: 3px solid #6E4B7B;
   border-radius: 4px;
-  transition: all 0.1s ease-out;
+  opacity: 0.8;
+  transition: all 0.1s ease;
 }
-.calendar__day-item--current-day, .calendar__day-item--select-day {
+.calendar__day-item:not([disabled]):hover {
+  background-color: rgba(231, 231, 231, 0.4588235294);
+  border-radius: 4px;
+  transition: all 0.1s ease;
+}
+.calendar__day-item--current-day {
   border-radius: 4px;
   color: #FFFFFF;
   background: #6E4B7B;

@@ -12,22 +12,20 @@
     <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;"
         xmlns="http://www.w3.org/2000/svg">
         <defs>
-            <symbol viewBox="0 0 8 16" id="arrow-next">
+            <symbol viewBox="0 0 8 21" id="arrow-next">
                 <g clip-path="url(#clip0_326_6)">
                     <path
                         d="M8.32499 11.8521L2.20832 17.9833C2.01249 18.178 1.69582 18.178 1.49999 17.9833L0.67499 17.163C0.479156 16.9683 0.479156 16.6535 0.67499 16.4588L5.61249 11.5L0.674989 6.54122C0.479155 6.34651 0.479155 6.03167 0.674989 5.83696L1.49999 5.01671C1.69582 4.82201 2.01249 4.82201 2.20832 5.01671L8.32499 11.1479C8.52082 11.3426 8.52082 11.6574 8.32499 11.8521Z"
                         fill="#6E4B7B" />
                 </g>
             </symbol>
-            <symbol viewBox="0 0 8 16" id="arrow-prev">
+            <symbol viewBox="0 0 8 21" id="arrow-prev">
                 <g clip-path="url(#clip0_326_3)">
                     <path
                         d="M0.675012 11.1479L6.79168 5.0167C6.98751 4.822 7.30418 4.822 7.50001 5.0167L8.32501 5.83695C8.52084 6.03166 8.52084 6.3465 8.32501 6.54121L3.38751 11.5L8.32501 16.4588C8.52084 16.6535 8.52084 16.9683 8.32501 17.163L7.50001 17.9833C7.30418 18.178 6.98751 18.178 6.79168 17.9833L0.675012 11.8521C0.479179 11.6574 0.479179 11.3426 0.675012 11.1479Z"
                         fill="#6E4B7B" />
                 </g>
             </symbol>
-
-
         </defs>
     </svg>
 
@@ -35,16 +33,19 @@
         <div class="calendar__wrapper">
             <div class="calendar">
                 <div class="calendar__navigation" id="calendar__navigation">
-                    <svg class="calendar__navigation-prev calendar__navigation-arrow">
-                        <use xlink:href="#arrow-prev"></use>
-                    </svg>
+                    <button class="calendar__navigation-buttons">
+                        <svg class="calendar__navigation-prev calendar__navigation-arrow">
+                            <use xlink:href="#arrow-prev"></use>
+                        </svg></button>
                     <div class="calendar__date-picker" id="calendar__date-picker">
                         <div class="calendar__currentMonth" id="calendar__currentMonth"></div>
                         <div class="calendar__currentDay" id="calendar__currentDay"></div>
                     </div>
-                    <svg class="calendar__navigation-next calendar__navigation-arrow">
-                        <use xlink:href="#arrow-next"></use>
-                    </svg>
+                    <button class="calendar__navigation-buttons"> <svg
+                            class="calendar__navigation-next calendar__navigation-arrow">
+                            <use xlink:href="#arrow-next"></use>
+                        </svg>
+                    </button>
                 </div>
                 <div class="calendar__days" id="calendar__days"></div>
                 <div class="calendar__day" id="calendar__day"></div>
